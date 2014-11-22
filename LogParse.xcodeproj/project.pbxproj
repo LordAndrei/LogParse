@@ -13,6 +13,7 @@
 		5879DEDE1A1FC962009A0B16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5879DEDD1A1FC962009A0B16 /* Images.xcassets */; };
 		5879DEE11A1FC962009A0B16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5879DEDF1A1FC962009A0B16 /* Main.storyboard */; };
 		5879DEED1A1FC963009A0B16 /* LogParseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5879DEEC1A1FC963009A0B16 /* LogParseTests.m */; };
+		5879DEFA1A1FC9CE009A0B16 /* LogLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5879DEF91A1FC9CE009A0B16 /* LogLine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		5879DEE61A1FC963009A0B16 /* LogParseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogParseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5879DEEB1A1FC963009A0B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5879DEEC1A1FC963009A0B16 /* LogParseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogParseTests.m; sourceTree = "<group>"; };
+		5879DEF81A1FC9CE009A0B16 /* LogLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogLine.h; sourceTree = "<group>"; };
+		5879DEF91A1FC9CE009A0B16 /* LogLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogLine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				5879DEDD1A1FC962009A0B16 /* Images.xcassets */,
 				5879DEDF1A1FC962009A0B16 /* Main.storyboard */,
 				5879DED31A1FC962009A0B16 /* Supporting Files */,
+				5879DEF81A1FC9CE009A0B16 /* LogLine.h */,
+				5879DEF91A1FC9CE009A0B16 /* LogLine.m */,
 			);
 			path = LogParse;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 			files = (
 				5879DEDC1A1FC962009A0B16 /* ViewController.m in Sources */,
 				5879DED91A1FC962009A0B16 /* main.m in Sources */,
+				5879DEFA1A1FC9CE009A0B16 /* LogLine.m in Sources */,
 				5879DED71A1FC962009A0B16 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
