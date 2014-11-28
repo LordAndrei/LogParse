@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6198" systemVersion="14A297b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14A388a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6198"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6221"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -641,12 +641,12 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider=""/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller - Window-->
+        <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
@@ -654,7 +654,7 @@
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -667,15 +667,97 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="792" height="527"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Y8L-WH-OrJ">
+                                <rect key="frame" x="117" y="490" width="30" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="File:" id="9la-dc-hDH">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ck2-sK-M2M">
+                                <rect key="frame" x="19" y="465" width="128" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Records processed:" id="PfN-1o-vHX">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7CZ-B7-I0F">
+                                <rect key="frame" x="18" y="440" width="129" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Records with errors:" id="nfP-mu-rat">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LFK-Jp-gJu">
+                                <rect key="frame" x="153" y="440" width="94" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="Iyp-zX-o7S">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Cyx-OC-eta">
+                                <rect key="frame" x="153" y="465" width="94" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="5zp-uf-cUz"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="WFu-Ro-9Hl">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cAL-QH-zjy">
+                                <rect key="frame" x="155" y="486" width="617" height="22"/>
+                                <pathCell key="cell" selectable="YES" editable="YES" alignment="left" id="VCn-7r-gb6">
+                                    <font key="font" metaFont="system"/>
+                                    <url key="url" string="file://localhost/Applications/"/>
+                                    <color key="backgroundColor" red="0.89803921568627454" green="0.92549019607843142" blue="0.97254901960784312" alpha="1" colorSpace="deviceRGB"/>
+                                </pathCell>
+                            </pathControl>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="LFK-Jp-gJu" firstAttribute="width" secondItem="Cyx-OC-eta" secondAttribute="width" id="2No-hP-2ig"/>
+                            <constraint firstItem="7CZ-B7-I0F" firstAttribute="top" secondItem="ck2-sK-M2M" secondAttribute="bottom" constant="8" id="4wU-An-hml"/>
+                            <constraint firstItem="7CZ-B7-I0F" firstAttribute="top" secondItem="ck2-sK-M2M" secondAttribute="bottom" constant="8" id="789-qB-up9"/>
+                            <constraint firstItem="ck2-sK-M2M" firstAttribute="trailing" secondItem="7CZ-B7-I0F" secondAttribute="trailing" id="Gck-H5-o1m"/>
+                            <constraint firstItem="LFK-Jp-gJu" firstAttribute="leading" secondItem="7CZ-B7-I0F" secondAttribute="trailing" constant="10" id="IXM-aJ-5yi"/>
+                            <constraint firstItem="Cyx-OC-eta" firstAttribute="top" secondItem="cAL-QH-zjy" secondAttribute="bottom" constant="4" id="Kgw-fs-e5R"/>
+                            <constraint firstItem="Cyx-OC-eta" firstAttribute="top" secondItem="cAL-QH-zjy" secondAttribute="bottom" constant="4" id="MVy-Sv-WYU"/>
+                            <constraint firstItem="LFK-Jp-gJu" firstAttribute="leading" secondItem="Cyx-OC-eta" secondAttribute="leading" id="McY-pb-bWo"/>
+                            <constraint firstItem="Y8L-WH-OrJ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="N6f-zN-RvF"/>
+                            <constraint firstItem="LFK-Jp-gJu" firstAttribute="top" secondItem="Cyx-OC-eta" secondAttribute="bottom" constant="8" id="Pgv-Gh-A9z"/>
+                            <constraint firstItem="cAL-QH-zjy" firstAttribute="leading" secondItem="Y8L-WH-OrJ" secondAttribute="trailing" constant="10" id="UMj-Vb-FdT"/>
+                            <constraint firstItem="LFK-Jp-gJu" firstAttribute="leading" secondItem="7CZ-B7-I0F" secondAttribute="trailing" constant="10" id="biv-lo-TS9"/>
+                            <constraint firstItem="ck2-sK-M2M" firstAttribute="trailing" secondItem="Y8L-WH-OrJ" secondAttribute="trailing" id="cQ9-5v-wC0"/>
+                            <constraint firstItem="Cyx-OC-eta" firstAttribute="leading" secondItem="ck2-sK-M2M" secondAttribute="trailing" constant="10" id="e0t-om-l4b"/>
+                            <constraint firstItem="cAL-QH-zjy" firstAttribute="leading" secondItem="Cyx-OC-eta" secondAttribute="leading" id="fcv-jH-lDB"/>
+                            <constraint firstItem="cAL-QH-zjy" firstAttribute="leading" secondItem="Y8L-WH-OrJ" secondAttribute="trailing" constant="10" id="gni-tS-Vwo"/>
+                            <constraint firstItem="ck2-sK-M2M" firstAttribute="top" secondItem="Y8L-WH-OrJ" secondAttribute="bottom" constant="8" id="oIb-bK-Btp"/>
+                            <constraint firstAttribute="trailing" secondItem="cAL-QH-zjy" secondAttribute="trailing" constant="20" id="ovR-bq-2bK"/>
+                            <constraint firstItem="7CZ-B7-I0F" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="scW-Pr-DVr"/>
+                            <constraint firstItem="cAL-QH-zjy" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="19" id="v5o-16-HzQ"/>
+                            <constraint firstItem="Cyx-OC-eta" firstAttribute="leading" secondItem="ck2-sK-M2M" secondAttribute="trailing" constant="10" id="w0Y-ZS-z6n"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cAL-QH-zjy" secondAttribute="trailing" constant="20" id="zxb-MG-6em"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="countError" destination="LFK-Jp-gJu" id="XCX-bH-Ohz"/>
+                        <outlet property="countProcess" destination="Cyx-OC-eta" id="3SA-TP-9XE"/>
+                        <outlet property="filePath" destination="cAL-QH-zjy" id="gUe-6w-byb"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="70" y="780.5"/>
         </scene>
     </scenes>
 </document>
