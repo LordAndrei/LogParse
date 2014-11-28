@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "LogLine.h"
 
 @interface ViewController ()
 
@@ -28,6 +29,38 @@
     [super setRepresentedObject:representedObject];
 
     // Update the view, if already loaded.
+}
+
+- (void) loadData
+{
+    
+    NSMutableString *buildString = [NSMutableString string];
+    [buildString appendString:[LogLine getInstanceDataHeader]];
+    [buildString appendString:@"\n"];
+    
+    NSError *anError = nil;
+    NSString *fileAccess = [NSString stringWithContentsOfFile:@"/Users/lordandrei/Documents/Apolo/logs/access_log.1415836800"
+                                                     encoding:NSUTF8StringEncoding
+                                                        error:&anError];
+    NSArray *arrayRawLogLines = [fileAccess componentsSeparatedByString:@"\n"];
+    NSLog(@"Located %lu entries\n\n", (unsigned long)arrayRawLogLines.count);
+    
+    for (NSString *rawLogLine in arrayRawLogLines) {
+        LogLine *aLogLine = [LogLine LogLineFromParsableLine:rawLogLine];
+        if (aLogLine.recIdx % 5000 == 0) {
+            [aLogLine printInstanceData];
+        }
+        [buildString appendString:[aLogLine getInstanceData]];
+        [buildString appendString:@"\n"];
+    }
+    
+    NSLog(@"\n\nSaving...");
+    [buildString writeToFile:@"/Users/lordandrei/Documents/Apolo/logs/access_log.1415836800.rep.txt"
+                  atomically:NO
+                    encoding:NSUTF8StringEncoding
+                       error:&anError];
+    NSLog(@"\n\nSaved");
+    
 }
 
 @end
